@@ -1,0 +1,128 @@
+* {
+  margin: 0px;
+  padding: 10px;
+  box-sizing: border-box; /* so that boxes don´t overflow into each other */
+  max-width: 1200px;
+}
+.body {
+  font-family: "Montserrat", sans-serif;
+}
+.container-father {
+  display: flex;
+  flex-flow: column nowrap; /* nowrap so that everything adapts to the size we´ve established */
+}
+.header {
+  background: url(./images/header.jpg); /* replace the color with the image location */
+  background-position: center;
+  background-attachment: contain; /* so that the image is contain inside the header */
+  background-size: cover;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 30%;
+}
+.menu {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.1
+  ); /*use rgba bc it has the alpha channel - 
+  which specifies the opacity for a color*/
+  display: flex;
+  flex-flow: row nowrap;
+}
+.logo {
+  flex: 1 1 auto; /* 1 = flex-grow -> defines the grow factor / 1 = flex-shrink -> defines the shrink factor / auto = flex-basis -> defines the initial size of the element, in this case automatic */
+  flex-direction: column;
+}
+.logo a:shadow {
+  transform: scale(1.2); /* NOT WORKING! */
+}
+.nav {
+  flex: 5 1 auto; /* 5 means that this child is five times bigger than the other two children */
+  font-size: 8px;
+  display: flex;
+}
+.nav a {
+  color: #9b9292;
+  text-transform: lowercase; /* doesn`t do anything*/
+  padding: 0 10px;
+  letter-spacing: 1px;
+}
+.nav a:hover {
+  color: #313030;
+}
+.social {
+  flex: 1 1 auto;
+  display: flex;
+}
+.social a {
+  color: #a39a9a;
+  font-size: 10px;
+  padding: 0;
+}
+.social a:hover {
+  color: #313030;
+}
+.main-text {
+  background: rgba(0, 0, 0, 0.1);
+}
+h1 {
+  background: rgba(0, 0, 0, 0.2);
+  color: rgb(233, 96, 78);
+  text-align: center;
+  opacity: 0.6;
+  font-size: 22px;
+}
+
+.section {
+  background: #000000;
+  display: flex;
+}
+.articles {
+  background: #46244c;
+  flex: 2 1 auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+.article {
+  background: #712b75;
+  flex: 1 1 40%; /* 40% so that there are two article boxes per row */
+}
+.navigation {
+  background: #7fffd4;
+  flex: 1 1 100%; /* 100 % so that navigation occupies the whole box */
+}
+.aside {
+  background: #c74b50;
+  flex: 1 1 auto;
+}
+.publicity {
+  background: #d49b54;
+}
+.footer {
+  background: #000000;
+}
+.footer-child {
+  background: #fffa4d;
+}
+/* for tablet devices */
+@media all and (max-width: 768px) {
+  .section {
+    background: #f5ed03;
+    flex-direction: column;
+  }
+}
+/* for mobile devices */
+@media all and (max-width: 411px) {
+  .header {
+    flex-direction: column;
+  }
+  .section {
+    background: #dbe916;
+    flex-direction: column;
+  }
+  .articles {
+    flex-direction: column;
+  }
+}
