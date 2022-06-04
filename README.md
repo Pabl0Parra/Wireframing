@@ -9,4 +9,6 @@ but it is very important that you make the box structure that we indicate.
 
 The maximum width of the layer that will contain the entire layout has to be <i>1200px</i> (max-width:1200px).
 
-[^1]: Check the image folder for a preview of the desired layout
+[^1]: Check the image below for a preview of the desired layout:
+
+![alt text](
